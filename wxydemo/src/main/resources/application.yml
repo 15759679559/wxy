@@ -1,0 +1,25 @@
+server:
+  port: 8080
+#  servlet:
+#    context-path: /wxy
+# RabbitMQ基础配置
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+#    publisher-confirms:  true
+#    connection-timeout:
+#    virtual-host:
+  # RabbitMQ监听配置
+  ## 初始并发量
+    listener:
+      simple:
+        concurrency:  5
+        ## 最大并发量
+        max-concurrency: 15
+        ## 签收方式
+        acknowledge-mode: manual
+        ## 最多一次消费多少条数据 -限流
+        prefetch: 1
