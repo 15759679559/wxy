@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
 
+    //测试备注
     @RequestMapping("messageSubscriber")
     public String messageSubscriber() throws Exception {
         MessageSubscriber messageSubscriber = new MessageSubscriber();
